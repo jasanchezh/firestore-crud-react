@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"; // Firebase app base
-import { getFirestore } from "firebase/firestore";
+import { getFirestore,  } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
