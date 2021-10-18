@@ -54,10 +54,10 @@ window.env = {
   "npm_node_execpath": "/opt/homebrew/Cellar/node/16.6.0/bin/node",
   "npm_config_prefix": "/opt/homebrew",
   "COLORTERM": "truecolor",
-  "FIREBASE_CONFIG_API_KEY": "AIzaSyCgE-TRv7qOb-GD1Cac2D_-buV5wT7bUFE",
-  "FIREBASE_CONFIG_AUTH_DOMAIN": "fb-crud-react-d88fd.firebaseapp.com",
-  "FIREBASE_CONFIG_PROJECT_ID": "fb-crud-react-d88fd",
-  "FIREBASE_CONFIG_STORAGE_BUCKET": "fb-crud-react-d88fd.appspot.com",
-  "FIREBASE_CONFIG_MESSAGING_SENDER_ID": "987409167711",
-  "FIREBASE_CONFIG_APP_ID": "1:987409167711:web:80908f974a50180841f2ea"
+  "REACT_APP_FIREBASE_CONFIG_API_KEY": "AIzaSyCgE-TRv7qOb-GD1Cac2D_-buV5wT7bUFE",
+  "REACT_APP_FIREBASE_CONFIG_AUTH_DOMAIN": "fb-crud-react-d88fd.REACT_APP_firebaseapp.com",
+  "REACT_APP_FIREBASE_CONFIG_PROJECT_ID": "fb-crud-react-d88fd",
+  "REACT_APP_FIREBASE_CONFIG_STORAGE_BUCKET": "fb-crud-react-d88fd.appspot.com",
+  "REACT_APP_FIREBASE_CONFIG_MESSAGING_SENDER_ID": "987409167711",
+  "REACT_APP_FIREBASE_CONFIG_APP_ID": "1:987409167711:web:80908f974a50180841f2ea"
 };

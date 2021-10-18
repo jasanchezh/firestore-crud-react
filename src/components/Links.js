@@ -2,15 +2,16 @@ import React from "react";
 import LinkForm from "./LinkForm";
 
 import { db } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 const Links = () => {
   const addOrEditLink = async (linkObject) => {
-    console.log("linkObject");
-    console.log(linkObject);
-    // const docRef = await addDoc(collection(db, "links"), linkObject);
-    await setDoc(doc(db, "links"), linkObject);
-    console.log("New task created");
+    try {
+      await addDoc(collection(db, "links"), linkObject);
+      console.log("New task created");
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
