@@ -11,6 +11,7 @@ const LinkForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Use it to check the console.log
     props.addOrEditLink(values);
+    setValues({ ...initialStateValues });
   };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -29,6 +30,7 @@ const LinkForm = (props) => {
           className="form-control"
           placeholder="http://www.someurl.com"
           name="url"
+          value={values.url}
         />
       </div>
       <div className="form-group input-group">
@@ -41,6 +43,7 @@ const LinkForm = (props) => {
           className="form-control"
           name="name"
           placeholder="Website name"
+          value={values.name}
         />
       </div>
       <div className="form-group">
@@ -50,6 +53,7 @@ const LinkForm = (props) => {
           rows="3"
           className="form-control"
           placeholder="Write a description"
+          value={values.description}
         ></textarea>
       </div>
       <button className="btn btn-primary btn-block">Save</button>

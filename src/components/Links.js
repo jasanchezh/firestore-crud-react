@@ -2,12 +2,21 @@ import React from "react";
 import LinkForm from "./LinkForm";
 
 import { db } from "../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, query, onSnapshot } from "firebase/firestore";
 
 const Links = () => {
   const addOrEditLink = async (linkObject) => {
     try {
-      await addDoc(collection(db, "links"), linkObject);
+      const allTask = [];
+      const q = query(collection(db, "links"));
+      await addDoc(q, linkObject);
+      onSnapshot(q, (querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          allTask.push(doc.data());
+        });
+      });
+      console.log("allTask");
+      console.log(allTask);
       console.log("New task created");
     } catch (e) {
       console.log(e);
